@@ -1,0 +1,8 @@
+typ p2d_t
+    let x: ::i16
+    let y: ::i16
+
+let p p2d_t
+let i u8= p.x-9
+let j i16= i+17 * 8;
+

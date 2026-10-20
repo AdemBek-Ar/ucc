@@ -1,0 +1,23 @@
+\p OS
+
+#let NAME#      ="Windows"
+#let VERSION#   ="10"
+#let PAGE_SIZE# =4KB
+
+\p ::
+#let STDIN#  =0
+#let STDOUT# =1
+#let STDERR# =2
+
+/*
+sys read
+sys write
+sys exit
+sys fopen
+sys fclose
+sys mkdir
+sys mmap
+sys getstat
+sys setstat
+...
+*/

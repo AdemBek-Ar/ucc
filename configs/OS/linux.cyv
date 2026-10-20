@@ -1,0 +1,24 @@
+\p OS
+
+#let NAME#      ="Linux"
+#let VERSION#   ="6.4.7"
+#let PAGE_SIZE# =4KB
+
+\p ::
+#let STDIN#  =0
+#let STDOUT# =1
+#let STDERR# =2
+
+sys read  0(u64, u8*, usz) i32
+sys write 1(u64, u8*, usz) i32
+sys exit 60(i32)
+
+/*
+sys fopen
+sys fclose
+sys mkdir
+sys mmap
+sys getstat
+sys setstat
+...
+*/

@@ -1,0 +1,19 @@
+\I "path/to/file" // including
+\a mv             // active one assembly keyword
+\A mv             // active assembly on one line
+\W                // active warning
+\M                // disable warning
+\^                // move lexer reader to the previos line in same arrow position
+\\                // get the peviose token by one line
+\n                // add a newline symbole
+"\\n"             // skip that newline
+\v                // version or addres
+\f                // format string
+\m                /* mathamaticals formula
+                    ranges        : ]8, 3]; ]-@, 89]
+                    squre root    : -/25; 3-/27
+                    valeur absolue: |-x|
+                    numerology    : \R; \Q; \D; \Z; \N; \N*; \R*-{0, 3}
+                    factorial     : 5!
+                    probability   : 3C5; 9P10
+                   */

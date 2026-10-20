@@ -1,0 +1,6 @@
+ARCH_KIND("x86",    x86,    0x3E)
+ARCH_KIND("MIPS",   MIPS,   0x08)
+ARCH_KIND("ARM",    ARM,    0x28)
+ARCH_KIND("amd64",  AMD64,  0x3E)
+ARCH_KIND("ARMv8",  ARMv8,  0xB7)
+ARCH_KIND("RISC-V", RISC_V, 0xF3)

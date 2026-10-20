@@ -1,0 +1,4 @@
+use enm Color3  = p3d_t<u8>
+use enm Color   = p4d_t<u8>
+
+use enm<usz W, usz H> Canvas = mx4d_t<u8, W, H>

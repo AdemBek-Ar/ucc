@@ -1,0 +1,137 @@
+/*    *default mode                      *C mode -not yet- */
+// vars
+    // [X] normal
+        let a:u8=13                        let u8:a=13
+        let a u8=13                        let u8 a=13
+        a:u8=13                            u8:a=13
+        a u8=13                            u8 a=13
+    // [X] auto typ
+        let a=13                           // same
+        a:=13                              // same
+    // [X] ptr
+        let a:*u8                          let *u8:a
+        let a *u8                          let *u8 a
+        a: *u8                             // illegal
+    // [X] ref
+        let a:&u8                          let &u8:a
+        let a &u8                          let &u8 a
+        a: &u8                             // illegal
+    // [X] arr
+        let a:[]u8                         let []u8:a
+        let a []u8                         let []u8 a
+        a: []u8                            // illegal
+    // [X] optional
+        let a:?u8                          let ?u8:a
+        let a ?u8                          let ?u8 a
+        a: ?u8                             // illegal
+    // [X] mut
+        let a:^u8                          let ^u8:a
+        let a ^u8                          let ^u8 a
+        a: ^u8                             // illegal
+    // [X] owned
+        let a:!u8                          let !u8:a
+        let a !u8                          let !u8 a
+        a: !u8                             // illegal
+    // [X] const
+        let a:#u8                          let #u8:a
+        let a #u8                          let #u8 a
+        a: #u8                             // illegal
+    // [X] stream
+        let a:...u8                        let ...u8:a
+        let a ...u8                        let ...u8 a
+        a: ...u8                           // illegal
+    // [X] complix propetise
+        let a:*[]&u8                       let *[]&u8:a
+        let a *[]&u8                       let *[]&u8 a
+        a: *[]&u8                          // illegal
+    // [X] compile time variable
+        #let a:*[]&u8                      #let *[]&u8:a
+        #let a *[]&u8                      #let *[]&u8 a
+        // illegal                         // illegal
+    // [X] macro
+        #a                                 // same
+    // [ ] dir|tuple
+        let a:{}                           let {}:a
+        let a {}                           let {} a
+        a: {}                              // illegal
+    // [ ] lambda
+        let f:fn()->u8                     let fn()->u8:f
+        let f fn()->u8                     let fn()->u8 f
+        let f:fn()u8                       let fn()u8:f
+        let f fn()u8                       let fn()u8 f
+        let f:()->u8                       let ()->u8:f
+        let f ()->u8                       let ()->u8 f
+        let f:()u8                         let ()u8:f
+        let f ()u8                         let ()u8 f
+
+        f:fn()->u8                         fn()->u8:f
+        f:fn()u8                           fn()u8:f
+        f:()->u8                           // illegal
+        f:()u8                             // illegal
+    // [ ] mulity-decleatation
+        let a u8, b u8                     let a u8, b u8
+        let [a b] u8, c u8                 let u8[a b], u8 c
+        // illegal                         // illegal
+    // [ ] unnanomys
+        let a:enm[1]                       let enm[1]:a
+        let a enm[1]                       let enm[1] a
+        a: enm[1]                          // illegal
+
+    // may be in future
+        mut a u8=13                        mut u8 a=13
+        con a u8=13                        con u8 a=13
+        tpl a u8=13                        tpl u8 a=13
+
+
+
+// fn|op
+    // [X] normal
+        fn a()-> u8                        // illegal
+        fn a() u8                          fn u8 a()
+        fn a-> u8                          // illegal
+        fn a u8                            fn u8 a
+        fn a()                             // same
+        fn a                               // same
+        fn +()-> u8                        // illegal
+        fn +() u8                          fn u8 +()
+        fn +-> u8                          // illegal
+        fn + u8                            fn u8 +
+        fn +()                             // same
+        fn +                               // same
+    // [ ] lambda (* or &)
+        fn a *()-> u8                      // illegal
+        fn a *() u8                        fn *u8 a ()
+        fn a *-> u8                        // illegal
+        fn + *()-> u8                      // illegal
+        fn + *() u8                        fn *u8 + ()
+        fn + *-> u8                        // illegal
+    // [ ] unnanomys-lambda
+        fn: -> u8                          // illegal
+        fn: u8                             fn u8:
+        fn:                                // same
+
+
+
+// typ|uni|enm
+    // [X] normal
+        typ type
+        enm enum
+        uni union
+    // [X] set SIZE
+        typ[SIZE] type
+        enm[SIZE] enum
+        uni[SIZE] union
+    // [ ] polymorfisem
+        typ typC use typA typB
+        enm typC use typA typB
+        uni typC use typA typB
+    // [ ] mini-declaration
+        typ {x u8, y i16} type
+        typ {x, y} int type
+    // [ ] mathable
+        enm {x, y, z} int[3] mtr3x3_ts
+        enm {x, y} int p2d_t
+    // [ ] grep search helpful
+        typ fn fntyp
+        typ enm enum
+        typ uni union

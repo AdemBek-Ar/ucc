@@ -1,0 +1,21 @@
+// flat data structures
+
+typ<typ _t> view_t
+    let ptr *_t=non
+    usz len    =0
+
+    frm(let ptr *_t, usz len)
+        me.ptr=ptr
+        me.len=len
+
+    frm(@cnst let ptr *_t)
+        me.ptr=ptr
+        me.len=let::size(ptr) / typ::size(_t)
+
+    fn [usz i] &_t
+        if i<len ret *(ptr+1)
+        ret non
+
+
+
+typ<typ _t> slc_t use view_t

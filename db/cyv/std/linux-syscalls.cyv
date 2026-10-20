@@ -1,0 +1,11 @@
+mod SYS
+    #READ 0
+    #WRITE 1
+    #EXIT 60
+
+/* syscall wrappers
+ * sys <name> <id> (<args>) <retyp?> */
+
+sys write SYS::WRITE (buf: *u8, len usz, fd usz) i32
+sys read  SYS::READ  (buf: *u8, len usz, fd usz) i32
+sys exit  SYS::EXIT  (ec i32) i32

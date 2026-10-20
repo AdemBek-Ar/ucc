@@ -1,0 +1,69 @@
+fn<enm Num> acos(Num i) Num;
+fn<enm Num> asin(Num i) Num;
+fn<enm Num> atan(Num i) Num;
+fn<enm Num> cos(Num i) Num;
+fn<enm Num> sin(Num i) Num;
+fn<enm Num> tan(Num i) Num;
+
+fn<enm Num> squr(Num i) Num;
+
+fn<enm Num> min(Num a, Num b) Num
+    if a<b ret a
+    ret b
+fn<enm Num> max(Num a, Num b) Num
+    if a>b ret a
+    ret b
+
+
+enm<enm Num> p2d_t =[2]Num
+    uni
+        Num x, y
+        Num r, g
+        Num h, s
+
+    to usz ret squr(x**2 + y**2)
+    fn cross(p2d_t) p2d_t;
+    fn dot  (p2d_t) p2d_t;
+
+enm<enm Num> p3d_t =[3]Num
+    uni
+        Num x, y, z
+        Num r, g, b
+        Num h, s, v
+
+    to usz ret squr(x**2 + y**2 + z**2)
+    fn cross(p3d_t) p3d_t;
+    fn dot  (p3d_t) p3d_t;
+
+enm<enm Num> p4d_t =[4]Num
+    uni
+        Num x, y, z, w
+        Num r, g, b, a
+        Num h, s, v, u
+
+    to usz ret squr(x**2 + y**2 + z**2 + w**2)
+    fn cross(p4d_t) p4d_t;
+    fn dot  (p4d_t) p4d_t;
+
+
+
+enm<enm Num> rect2d_t =[2]p2d_t
+    p2d_t topleft, bottomright
+
+    to usz ret (bottomright.x-topleft.x) * (bottomright.y-topleft.y)
+
+enm<enm Num> rect3d_t =[2]p3d_t
+    p3d_t topleft, bottomright
+
+    to usz ret (bottomright.x-topleft.x) * (bottomright.y-topleft.y) * (bottomright.z-topleft.z)
+
+enm<enm Num> rect4d_t =[2]p4d_t
+    p4d_t topleft, bottomright
+
+    to usz ret (bottomright.x-topleft.x) * (bottomright.y-topleft.y) * \
+               (bottomright.z-topleft.z) * (bottomright.w-topleft.w)
+
+
+enm<enm Num, usz ROWS, usz COLUMNS> mx2d_t =p2d_t[ROWS][COLUMNS]
+enm<enm Num, usz ROWS, usz COLUMNS> mx3d_t =p3d_t[ROWS][COLUMNS]
+enm<enm Num, usz ROWS, usz COLUMNS> mx4d_t =p4d_t[ROWS][COLUMNS]

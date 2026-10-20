@@ -1,0 +1,8 @@
+{
+  "always_treat_brackets_as_autoclosed": false,
+  "indent_guides": {
+    "background_coloring": "disabled",
+    "coloring": "indent_aware"
+  },
+  "hard_tabs": true
+}

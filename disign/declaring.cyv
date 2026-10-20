@@ -1,0 +1,28 @@
+enm[1] u8 // declaring a enumarical with size one `[1]` is optional
+
+typ Object // declaring a type or a struct
+    let b [6]u8 // array of u8
+    bit deleted // bit feilding
+    bit 2 kind
+
+uni tokendata_t // declaring a union
+    u8
+    byte
+
+
+
+let var= 4;    // declaring a variable that got auto generated type from the expretion `;` are optional
+let var :u8= 4 // declaring a variable with typ u8 `:` are optional
+// using these on type make them
+   & referance: fancy pointer that can't be non
+   # constent : read only
+   ? optional : just a pointer
+   * pointer  : just a number hold an addrese
+   ^ mutable  : can be edit even if it in const scope
+   ! owned    : can't be passed directly
+   []array    : flat memory space of crrent typ
+   ()lambda   : fancy pointer to a function
+   {}tuple    : quick struct
+   ``directory: a map
+
+fn main() -> i32 // declaring a function with typ i32 `->` are optional

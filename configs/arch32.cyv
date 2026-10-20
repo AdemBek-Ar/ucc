@@ -1,0 +1,4 @@
+#let WORD_SIZE#u8 =2
+#let PTR_SIZE #u8 =4
+#let INT_SIZE #u8 =4
+#let ARCH     #u8 =32

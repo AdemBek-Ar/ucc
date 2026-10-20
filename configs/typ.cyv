@@ -1,0 +1,16 @@
+enm[INT_SIZE] uint_t;
+enm[INT_SIZE] -int_t;
+enm[INT_SIZE] -chr_t;
+enm[INT_SIZE] .float_t;
+
+enm[PTR_SIZE] usz;
+enm[PTR_SIZE] -isz;
+
+// add * for Type (enm|typ|uni) will make it pointerable
+// add : for Type (enm|typ|uni) will make it able to deal with text literal
+enm[PTR_SIZE] *:Txt; // c string
+
+
+enm[PTR_SIZE*2] :str_t // text view
+    ptr: Txt
+    len: usz

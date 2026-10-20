@@ -1,0 +1,33 @@
+/* ========================================================================== *
+ | Cyver Built-In Types                                                       |
+ * ========================================================================== */
+ 
+// enm is unsigned by default
+enm[ 1] u8;
+enm[ 2] u16;
+enm[ 4] u32;
+enm[ 8] u64;
+enm[16] u128;
+enm[32] u256;
+enm[64] u512;
+
+// add `-` for Type enm will make it signed
+enm[ 2] -ch16;
+enm[ 1] -ch8;
+enm[ 4] -ch32;
+
+enm[ 1] -i8;
+enm[ 2] -i16;
+enm[ 4] -i32;
+enm[ 8] -i64;
+enm[16] -i128;
+enm[32] -i256;
+enm[64] -i512;
+
+// add `.` for Type enm will make it floatable
+enm[ 2] .f16;
+enm[ 4] .f32;
+enm[ 8] .f64;
+enm[16] .f128;
+enm[32] .f256;
+enm[64] .f512;

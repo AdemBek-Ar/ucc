@@ -1,0 +1,29 @@
+/* ========================================================================== *
+ | Cyver Main Lexer Test                                                      |
+ | * this file test all kind of tokens the lexer can lex, and                 |
+ | * all kind of pre-processing that it do:                                   |
+ |           * [{(`\t`)}] blocks tree                                         |
+ |           * backslash incoding                                             |
+ |           * skiping lined and block arguments                              |
+ * ========================================================================== */
+
+"text \"literal\""   'string \'literal\'' // lexing text literals
+'C' 'أ' 'Ü'                               // lexing char literals
+_Ident ident_ mv                          // lexing ident
+\^\n\I "./included.node"                  // lexing backslash incoding
+let typ enm T F non                       // lexing kewords
+\A mv \Apos \A sys                        // lexing assembly kewords
+10   0b10_10   0ha     0o12               // lexing number literals
+10.1 0b1010.1  0ha.1.0 0o12.1             // lexing float literals
+?? => ==> --> -> >> << >>= <<= ...        // lexing operations
+root(block0[block1{block2`block3`}])      // lexing blocks
+tab0                                      // lexing tab blocks
+	tab1
+		tab2
+
+/* skiping blocked comment
+ * to print this token in table use -DDBG flags
+	```
+	make all ARGS="... -DDBG"
+	```
+ */

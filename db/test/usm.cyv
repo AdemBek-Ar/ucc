@@ -1,0 +1,6 @@
+let bss [4 KB]u8
+
+-->
+	mv $0, 60
+	mv $1, 69
+	sys

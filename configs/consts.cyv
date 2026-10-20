@@ -1,0 +1,9 @@
+#let FALSE #u8=0
+#let TRUE  #u8=1
+#let non   #u8=0
+#let EOF   #u8=-1
+
+#let KB #u16= 1024
+#let MB #u32= KB**2
+#let GB #u32= KB**3
+#let TB #u64= KB**4
