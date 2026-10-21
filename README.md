@@ -1,14 +1,34 @@
 # Cyver programming language
-     - a staticly type compiled programing language that designed as a learning side project, the main idea of it is giving the full control of the code more then what C or C++ give, wrapped in high level features
+- a staticly type compiled programming language that designed as a learning side project, the main idea of it is giving the full control of the code more then what C or C++ give, wrapped in high level features
 
 ### node:
-      - this languge did not ready to real world application, after 3 mounths of developing yet it not got into the `generting birary`, it only able to analyse the code into an AST (abstracted syntax tree) and constexpr solving
+- this language did not ready to real world application, after 3 months of developing yet it not got into the `generating binary`, it only able to analyse the code into an AST (abstracted syntax tree) and constexpr solving
       - there is no built-in types, whatever type that came with the language the user can remake it
-      - licance: `MIT ©️ 05/09/2026`
+      - licence: `MIT ©️ 05/09/2026`
       - ';' are optional
       - more free syntax
+## How to use ucc in project space
+- using `make` build tool, go to .prj folder run
+  ``` bash
+  make all # for build the project, use `ARGS="<args>"` to set arguments
+  ```
+  ``` bash
+  make clean # to clean the project
+  ```
+  ``` bash
+  make run # to run .prj/bin/cyv
+  ```
+  ``` bash
+  make dbg # to use debuger, (gdb by default)
+  ```
+  ``` bash
+  make sz # to print exectutable info including size
+  ```
+  ``` bash
+  make opt # to strip the executable (by removing symbols)
+  ```
 
-## How to use
+## How to use the language
 - you have modern programming concepts
     - vars
     ```
@@ -17,23 +37,23 @@
     z :i32     // an other way
     w i32      // can only be use with normal types (pointers or references will counted as operation in this case)
     
-    type may be gussed from expretion
+    type may be gassed from experation
     
     let x= 1024
     y := -1
     
     let ref &u8      // reference 
     let mut ^u8      // mutable var 
-    let const #u8    // constent var
+    let const #u8    // constant var
     let optional ?u8 // optional
-    let owned !u8    // safty stuff, can't be passed by value diractly
+    let owned !u8    // safety stuff, can't be passed by value directly
     ptr :*u8         // a pointer
     arr :[512]u8     // an array
     lmb:fn()->u8     // lambda, `->` is optional
     
     #let ctv=34 // compile time variable
     
-    #MACRO // defining a macro, !expacting a block after defining
+    #MACRO // defining a macro, !excpacting a block after defining
     ```
 
     - functions
@@ -45,7 +65,7 @@
     
     fn undef() // declaration without defining, `()` are optional when there are empty
     
-    --> // this is the entry point diractly from `_start` no main (no C runtime init)
+    --> // this is the entry point directly from `_start` no main (no C runtime init)
         exit(69)
     ```
 
